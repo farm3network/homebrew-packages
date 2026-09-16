@@ -6,22 +6,22 @@ class Farm3 < Formula
   on_macos do
     on_arm do
       url "https://github.com/farm3network/packages/releases/download/v0.17.0/farm3-darwin-arm64.tar.gz"
-      sha256 "db39d37d92990ea809cb98e6e1795c7997af459d78f99c4e1d67a02013540263"
+      sha256 "9c043e196f9ed269854eaaf5657ceb18c8c7df6478bf6c06c060360cf68a75ff"
     end
     on_intel do
       url "https://github.com/farm3network/packages/releases/download/v0.17.0/farm3-darwin-amd64.tar.gz"
-      sha256 "50d5150a9530e9946685315e64595550a817788fbd9d84d2eb97e0577d78ad80"
+      sha256 "8755b9ab5cf3234ae1aa95b6fda750c7500c2c262cbc436795dae1b305dcc4d7"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/farm3network/packages/releases/download/v0.17.0/farm3-linux-arm64.tar.gz"
-      sha256 "aa3418b2ec43b39ca680c43948216a049e63a8ad80a5243d169cfd5b664da460"
+      sha256 "61166059fc23b3ef1fd555a5c1166415e59db7155e053dc6fab463933ea94ad1"
     end
     on_intel do
       url "https://github.com/farm3network/packages/releases/download/v0.17.0/farm3-linux-amd64.tar.gz"
-      sha256 "efc8cade1ac77fc291e093972b2c4383643b996048a013949e9fdb63544a5a64"
+      sha256 "05a99f20adec624ed87ad52c762ae06e187e2a3abfd1bdfe6943df65ad987473"
     end
   end
 
