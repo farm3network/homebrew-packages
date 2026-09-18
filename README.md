@@ -6,9 +6,14 @@ Package manifests for the farm3 CLI — macOS, Linux, and Windows.
 
 **macOS / Linux (Homebrew):**
 ```bash
-brew tap farm3network/packages
-brew install farm3
+# Fully qualified name — Homebrew taps this repo and trusts the formula
+# automatically (Homebrew 6+). No separate `brew tap` / `brew trust` needed.
+brew install farm3network/packages/farm3
 ```
+
+Short-name install (`brew tap farm3network/packages` then `brew install farm3`)
+requires an explicit trust step on Homebrew 6+:
+`brew trust --formula farm3network/packages/farm3`.
 
 **Windows (Scoop):**
 ```powershell
@@ -63,26 +68,37 @@ farm3 run consumer -network myorg -psk "$MYORG_PSK" -private-relay "$PRIVATE_REL
 brew upgrade farm3
 brew uninstall farm3
 
+# Optional: drop the tap / trust grant
+brew untap farm3network/packages
+brew untrust --formula farm3network/packages/farm3
+
 # Scoop
 scoop update farm3network/farm3
 scoop uninstall farm3network/farm3
 ```
 
+`brew uninstall` / `scoop uninstall` remove the binaries only. Runtime state
+(keys, leases, iOS config) under `~/.farm3` is left in place. For a full wipe:
+
+```bash
+rm -rf ~/.farm3
+```
+
 ## How it works
 
 `farm3` is a thin dispatcher: it execs/spawns into the `farm3-provider` /
-`farm3-consumer` binaries installed alongside it (via `brew install farm3` or
-`scoop install`), forwarding all flags untouched. So `farm3 run provider
-<flags>` behaves exactly like running the underlying provider binary
-directly.
+`farm3-consumer` binaries installed alongside it (via
+`brew install farm3network/packages/farm3` or `scoop install`), forwarding all
+flags untouched. So `farm3 run provider <flags>` behaves exactly like running
+the underlying provider binary directly.
 
 ## Platform notes
 
-- **macOS / Linux**: fully supported, both arm64 and amd64/intel.
-- **Windows**: the CLI dispatcher and cross-compiled binaries are built and
-  packaged for amd64 and arm64, but device-control flows that shell out to
-  platform tools (e.g. `adb`, `go-ios`) have not yet been verified on
-  Windows. Treat Windows support as CLI-level for now.
+- **macOS / Linux**: fully supported, both arm64 and amd64/intel (Homebrew).
+- **Windows**: Scoop installs the CLI dispatcher + provider/consumer binaries
+  (amd64 and arm64). Device-control flows that shell out to platform tools
+  (e.g. `adb`, `go-ios`) have not yet been verified on Windows — treat
+  Windows as CLI-level for device work for now.
 
 ## Maintainers
 
