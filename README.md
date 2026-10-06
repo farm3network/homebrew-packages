@@ -21,6 +21,22 @@ scoop bucket add farm3network https://github.com/farm3network/packages
 scoop install farm3network/farm3
 ```
 
+## Version
+
+```bash
+farm3 version   # also: farm3 -v / farm3 --version
+```
+
+Package managers also report the installed formula/manifest version:
+
+```bash
+# Homebrew
+brew list --versions farm3network/packages/farm3
+
+# Scoop
+scoop list farm3
+```
+
 ## Run
 
 One command family per role. Public needs no private flags; private adds
