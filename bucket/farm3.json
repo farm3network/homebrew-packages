@@ -1,12 +1,12 @@
 {
   "architecture": {
     "64bit": {
-      "hash": "1d478933c4dec6624c4b5e209a2d6becc82a0732cd2dacdd68759aa26b077d73",
-      "url": "https://github.com/farm3network/packages/releases/download/v0.17.0/farm3-windows-amd64.zip"
+      "hash": "5cb06b7c7061d77044c1e8208b0cab7972ca78a8bbb70240ecb4bfd597cc1c07",
+      "url": "https://github.com/farm3network/packages/releases/download/v0.18.0/farm3-windows-amd64.zip"
     },
     "arm64": {
-      "hash": "1657f5b55d9ee7d8bfbbb4bc2348c803007130fa8660b2eaba8185df27850bd7",
-      "url": "https://github.com/farm3network/packages/releases/download/v0.17.0/farm3-windows-arm64.zip"
+      "hash": "a989031c96069ee1bc7295abe31922d290c3cba5ebdda4241d1dbad887eb8ffb",
+      "url": "https://github.com/farm3network/packages/releases/download/v0.18.0/farm3-windows-arm64.zip"
     }
   },
   "bin": [
@@ -17,5 +17,5 @@
   "description": "Farm3 CLI (provider/consumer node runner)",
   "homepage": "https://github.com/farm3network/packages",
   "license": "Proprietary",
-  "version": "0.17.0"
+  "version": "0.18.0"
 }
