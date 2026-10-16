@@ -1,11 +1,11 @@
 {
   "architecture": {
     "64bit": {
-      "hash": "bf70237077358c21e4d86ea28fa4d2a40aa92b0fd5ed060136496df4eef8aa3f",
+      "hash": "2f504d3aa1054378268a28ad411ac5b7e0e84af73ddfa2030631f0e691560122",
       "url": "https://github.com/farm3network/packages/releases/download/v0.19.0/farm3-windows-amd64.zip"
     },
     "arm64": {
-      "hash": "aa3180a9c133f6a56951a8d33092453e9582191476907c17426c0b23ca98c985",
+      "hash": "ba72ba0ef4247f4908eab5faf9758357ddf510922766b2439399011bdf6ae70c",
       "url": "https://github.com/farm3network/packages/releases/download/v0.19.0/farm3-windows-arm64.zip"
     }
   },
